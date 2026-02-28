@@ -189,10 +189,15 @@ startBtn.addEventListener('click', () => {
 resetBtn.addEventListener('click', () => {
     //clear the grid
     location.reload();
-    })
+ })
 
 
+document.getElementById('left').addEventListener('click', moveLeft);
+document.getElementById('rotate').addEventListener('click', rotate);
+document.getElementById('right').addEventListener('click', moveRight);
+document.getElementById('down').addEventListener('click', moveDown);
 
+    
 })
 
 
