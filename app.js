@@ -197,6 +197,16 @@ document.getElementById('rotate').addEventListener('click', rotate);
 document.getElementById('right').addEventListener('click', moveRight);
 document.getElementById('down').addEventListener('click', moveDown);
 
+//prevent default touch actions to avoid conflicts with game controls
+let lastTouchEnd = 0;
+document.addEventListener('touchend', function (event) {
+  const now = Date.now();
+  if (now - lastTouchEnd <= 300) {
+    event.preventDefault();
+  }
+  lastTouchEnd = now;
+}, false);
+
     
 })
 
